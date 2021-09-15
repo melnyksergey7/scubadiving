@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scuba diving</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span><b>Scuba diving</span>
+    </div>
+    <div id="about">
+      <a href="#" title="Opportunities" onclick="slowScroll('main')">Opportunities</a>
+      <a href="#"onclick="slowScroll('overview')" title="advantages">Advantages</a>
+      <a href="#"onclick="slowScroll('contacts')" title="contacts">Contacts</a>
+    </div>
+    </header>
+
+     <div id="top">
+       <h1>Best hobby</h1>
+       <h3>in the World</h3>
+     </div>
+
+     <div id="main">
+       <div class="intro">
+         <h2>Our offers help us</h2>
+         <span>Try something new for yourself</span>
+       </div>
+       <div class="text">
+         <span>Choose your favorite seaside and enjoy your life</span>
+       </div>
+     </div>
+
+     <div class="overview">
+       <h2>Advantages</h2>
+       <h4>it would be amazing</h4>
+
+       <div class="img">
+         <img src="https://hiddendepthsdiving.com/wp-content/uploads/2020/05/DSD-main-phone.jpg" 
+         alt="scuba">
+         <p>Experiment with weight placement. For example, if you're wearing 12 pounds of weight, try removing 4 from your belt of BC pockets, and adding 1 or 2 pounds into a trim pocket. By shifting some, but not all, of the weight, you may be able to shave off a couple of pounds.</p> 
+       </div>
+       <div class="img">
+        <img src="https://www.deeperblue.com/wp-content/uploads/2016/03/AdobeStock_62701813-scaled.jpeg" 
+        alt="scuba">
+        <p>As you pack and check your equipment, double-check to make sure nothing has changed that could affect initial weighting. New wetsuit? Brand-new wetsuits need more weight than old ones.</p>
+      </div>
+     </div>
+
+     <div id="contacts">
+        <h5>Feedback</h5>
+        <form id="form_input">
+        <label for="name">Name<span></span></label><br>
+        <input type="text" placeholder="Input name" name="name" id="name"><br>
+        <label for="email">Email<span></span></label><br>
+        <input type="email" placeholder="Input email" name="email" id="email"><br>
+        <label for="message">Message<span></span></label><br>
+        <textarea placeholder="Input your message" name="message" id="message"></textarea><br>
+        <div id="mess_send" class="btn">Send</div>
+      </form>
+     </div>
+  <script>
+    function slowScroll(id) {
+  $('html, body').animate({
+    scrollTop: $(id).offset().top
+  }, 400);
+}
+
+$(document).on("scroll", function
+ () {
+   if($(window).scrollTop() === 0)
+   $("header").removeClass("fixed");
+   else
+   $("header").attr("class", "fixed");
+ });
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</body>
+</html>
